@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #2f3e2f;
+    margin: 0;
+    padding: 24px 16px;
+    line-height: 1.6;
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)),
+        url('/MVC/img/fond.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body > * {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 8px;
+    border-radius: 999px;
+    margin-bottom: 36px;
+    backdrop-filter: blur(10px);
+}
+
+nav a {
+    color: #3f6b3f;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 22px;
+    border-radius: 999px;
+    transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover {
+    background: #f7e27a;
+    color: #4a3f00;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2f6a3a;
+    margin-bottom: 28px;
+    text-shadow: 0 2px 12px rgba(255, 255, 255, 0.9);
+}
+
+p {
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 20px 24px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 22px;
+    margin-bottom: 12px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    transition: transform 0.2s, background 0.2s;
+}
+
+li:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 252, 220, 0.65);
+}
+
+a {
+    color: #3f7a3f;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+li a:hover,
+p + a:hover {
+    color: #b8940a;
+}
+
+p + a {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 8px 20px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 14px;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #444;
+}
+
+.badge[data-status="en attente"] { background: #fff1a8; color: #7a6400; }
+.badge[data-status="en cours"]   { background: #cfeec0; color: #2f6a3a; }
+.badge[data-status="achevée"]    { background: #ffffff; color: #2f6f4f; }
